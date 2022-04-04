@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/styles.css" rel="stylesheet" type="text/css"/>
     <title>Jogo da Velha</title>
-</head>
-<body>
     
+</head>
+<header>
+
+    <section1>
+        <h2 class="title">Jogo Da Velha</h2>
+    </section1>
+
+   </header>
+
+<body>
+
+
+        <section2>
+            /** aqui entra o selecionador do jogador */
+
+            <h1>Jogador <span id ="Jogador"></span></h1>
+
+
+        </section2>
+
+       <section3 class="grid">
+
+           <div class="space1"><input type="button" value="_"></div>
+           <div class="meio"><input type="button" value="_"></div>
+           <div class="space1"><input type="button" value="_"></div>
+           <div class="space1"><input type="button" value="_"></div>
+           <div class="meio"><input type="button" value="_"></div>
+           <div class="space1"><input type="button" value="_"></div>
+           <div class="space2"><input type="button" value="_"></div>
+           <div class="meioPonta"><input type="button" value="_"></div>
+           <div class="space2"><input type="button" value="_"></div>
+           
+       </section3>
+
+       <section4>
+           /** anuncia o vencedor */
+
+           <section class="display announcer hide"></section>
+
+
+       </section4>
+
+       <section5>
+            /** Botão de reset */
+            <input type="button" value="Reiniciar" id="reiniciar">       
+        
+
+
+       </section5>
+
+
+    
+   <script src="./scripts.js"></script> 
 </body>
 </html>
