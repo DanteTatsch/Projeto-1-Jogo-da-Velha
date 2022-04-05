@@ -1,18 +1,38 @@
-const jog1 =  document.getElementById("player1");
-const jog2 = document.getElementById("player2")
+var jogador, vencedor = null;
+var jogadorSelecionado = document.getElementById('jogador-selecionado');
+var vencedorSelecionado = document.getElementById('vencedor-selecionado');
 
 
-/** sortear jogador */
+
+mudarJogador( 'X' );
 
 
-b_iniciar.addEventListener('click', function getRandomInt(jog1, jog2) {
-    let jog1 = 0;
-    let jog2 = 1;
-    return Math.floor(Math.random() * 2 + jog1;
-  })
+function escolherQuadrado(id) {
+    if (vencedor !== null) {
+        return;
+    }
 
+    var quadrado = document.getElementById(id);
+    if (quadrado.innerHTML !== '-') {
+        return;
+    }
     
 
+    quadrado.innerHTML = jogador;
+    quadrado.style.color='#000';
 
+    if (jogador === 'X') {
+        jogador = 'O';
+    } else {
+        jogador = 'X';
+    }
 
-       
+    mudarJogador(jogador);
+    checaVencedor();
+}
+
+function mudarJogador(valor) {
+    jogador = valor;
+    jogadorSelecionado.innerHTML = jogador;
+}
+

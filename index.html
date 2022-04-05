@@ -16,69 +16,55 @@
 
    </header>
 
-<body>
-
-
-        <section2>
-
-            
-            
-            
-            <label for="username">Player 1</label>
-            <input id = player1 name="player 1" type="text" />
-            
-
-            
-            <label for="username">Player 2</label>
-            <input id = player2 name="player 2" type="text" />
-            
-            
-            
-            <input type="button" value="Draw" id="Jogador">  
-
-            
-
-
-        </section2>
-
-       <section3 class="grid">
-
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           <div class="cell" data-cell></div>
-           
-       </section3>
-       
-       <div class="mensagemVencedor" data-mensagemVencedor>
-      
-       <p>X Venceu!</p>
-       <button>Reiniciar</button>
-    </div>
-
-       <section4>
-           
-
-           
-
-
-       </section4>
-
-       <section5>
-           
-                  
-        
-
-
-       </section5>
-
-
+   <body>
     
-   <script src="./scripts.js"></script> 
-</body>
-</html>
+    
+    <div>
+        <div id="1" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="2" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="3" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+    </div>
+    
+    <div>
+        <div id="4" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="5" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="6" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+    </div>
+    
+    <div>
+        <div id="7" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="8" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="9" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+    </div>
+        
+    <div class="jogador">
+        <label>
+            Jogador:
+        </label>
+        <label id="jogador-selecionado">
+    
+        </label>
+    </div>
+    
+    <div class="vencedor">
+        <label>
+            Vencedor:
+        </label>
+        <label id="vencedor-selecionado">
+    
+        </label>
+    </div>
+    
+    <div>
+        <button onclick="reiniciar()">
+            Reiniciar
+        </button>
+    </div>
+    
+    <img src="./styles/c51cda89a29626ea7b655bd7f703218c.jpg">
+
+    </body>
+    
+    <script src="./scripts/index.js"></script>
+    
+    </html>
