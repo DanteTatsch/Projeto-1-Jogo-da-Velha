@@ -13,29 +13,43 @@ body {
     background-image: url(./fundo-de-rosca-sem-descontinuidades-do-tema-jogos-com-tela-azul-rabisco-padrão-videogame-vetorial-textura-perfeita-para-235629198.jpg);
 }
 
-.quadrado {
-    text-align: center;
-    width: 50px;
-    background: #eee;
-    display: inline-block;
-    padding: 40px;
-    font-size: 60px;
-    margin: 5px;
-    cursor: pointer;
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 10px auto;
     color: #eee;
     border-radius: 8%;
 }
 
-.jogador, .vencedor {
-    font-size: 30px;
-    margin-top: 10px;
-    font-family:'Permanent Marker', cursive;
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-color: #5586e2;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+    color: black;
+    border-radius: 8%;
+    background-color: white;
 }
 
-button {
-    margin-top: 10px;
-    width: 10%;
-    height: 30px;
-    background: #eee;
-    cursor: pointer;
+.game--status {
+    font-size: 50px;
+    color: black;
+    margin: 20px auto;
+    font-family: "Permanent Marker", cursive;
 }
+
+.game--restart {
+    background-color: #5586e2;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: black;
+    border: 2px solid ;
+}
+ 
+
