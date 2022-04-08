@@ -3,12 +3,13 @@ const statusDisplay = document.querySelector('.status');
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
+let cellColor = document.querySelector('.cell')
 
-const winningMessage = () => `Jogador ${currentPlayer} venceu!`;
-const drawMessage = () => `Velha!`;
-const currentPlayerTurn = () => `Vez do jogador ${currentPlayer}'s`;
+const mensagenVitoria = () => `Jogador ${currentPlayer} venceu!`;
+const mensagemEmpate = () => `Velha!`;
+const jogadorVez = () => `Vez do jogador ${currentPlayer}`;
 
-statusDisplay.innerHTML = currentPlayerTurn();
+statusDisplay.innerHTML = jogadorVez();
 
 const winningConditions = [
     [0, 1, 2],
@@ -28,7 +29,7 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusDisplay.innerHTML = currentPlayerTurn();
+    statusDisplay.innerHTML = jogadorVez();
 }
 
 function handleResultValidation() {
@@ -42,20 +43,24 @@ function handleResultValidation() {
             continue;
         }
         if (a === b && b === c) {
-            roundWon = true;
+            roundWon = true;  
             break
+            
         }
+        
     }
 
+    
+
     if (roundWon) {
-        statusDisplay.innerHTML = winningMessage();
+        statusDisplay.innerHTML = mensagenVitoria();
         gameActive = false;
         return;
     }
 
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
-        statusDisplay.innerHTML = drawMessage();
+        statusDisplay.innerHTML = mensagemEmpate();
         gameActive = false;
         return;
     }
@@ -79,7 +84,7 @@ function handleRestartGame() {
     gameActive = true;
     currentPlayer = "X";
     gameState = ["", "", "", "", "", "", "", "", ""];
-    statusDisplay.innerHTML = currentPlayerTurn();
+    statusDisplay.innerHTML = jogadorVez();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 }
 
